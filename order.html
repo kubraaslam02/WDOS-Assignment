@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocies Supermarket</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html">
+      <img class="logo" src="./images/logo.png"alt="Logo">
+    </a>
+    <!--navigation menu -->
+    <div class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="AboutUs.html">About Us</a></li>
+      <!--drop-down menu -->
+      <div class="dropdown">
+        <button class="dropbutton">
+          <li><a href="Products.html">Products</a></li>
+        </button>
+        <div class="dropdown-content">
+          <li><a href="DairyProducts.html">Dairy Products</a></li>
+          <li><a href="Vegetables.html">Vegetables</a></li>
+          <li><a href="Cosmetics.html">Cosmetics and Skincare</a></li>
+        </div>
+      </div>
+      <!--icons in the navbar -->
+      <div class="icons-container">
+        <a href="loyalty.html" class="login-icon">
+          <img src="images/loyalty-icon.png" alt="">
+        </a>
+        <a href="order.html" class="cart-icon">
+          <img src="images/shopping-cart-icon.png" alt="">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Order Form -->
+    <section class="order-form-container">
+      <div class="order-box">
+        <h1>Order From Us Now!</h1>
+        <form action="/submit-order" method="post">
+          <div class="customer-info">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            
+            <label for="phone">Mobile Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="07XXXXXXXX" required>
+          </div>
+        
+          <div class="shipping-address">
+            <label for="address">Shipping Address:</label>
+            <textarea id="address" name="address" placeholder="Enter the shipping address" required></textarea>
+          </div>
+        
+          <div class="product-selection">
+            <label for="category">Select Category:</label>
+            <select id="category" name="category" required>
+              <option value="">--Please choose an option--</option>
+              <option value="vegetables">Vegetables</option>
+              <option value="dairy">Dairy Products</option>
+              <option value="cosmetics">Cosmetics</option>
+              <option value="skincare">Skincare</option>
+            </select>
+            
+            <label for="product">Product:</label>
+            <input type="text" id="product" name="product" required>
+            
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+          </div>
+        
+          <div class="additional-notes">
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" name="notes"></textarea>
+          </div>
+        
+          <button type="button">Add to Cart</button>
+        </form>
+      </div>
+    </section>   
+  </main>
+  <footer class="custom-footer">
+    <div class="footer-social">
+      <!--social icons linked to the top of the page-->
+        <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+    </div>
+
+    <div class="footer-contact">
+      <p>Phone: +1234567890</p>
+      <p>Email: info@grociessupermarket.com</p>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2024 Grocies Supermarket. All rights reserved.</p>
+    </div>
+    <!--image from: https://unsplash.com/-->
+  </footer>
+</body>
+</html>
